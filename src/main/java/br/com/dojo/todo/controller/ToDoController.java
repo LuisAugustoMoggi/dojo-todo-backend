@@ -1,4 +1,4 @@
-package br.com.dojo.todo;
+package br.com.dojo.todo.controller;
 
 import br.com.dojo.todo.domains.Todo;
 import br.com.dojo.todo.service.TodoService;
