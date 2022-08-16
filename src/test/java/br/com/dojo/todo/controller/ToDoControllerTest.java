@@ -75,9 +75,16 @@ public class ToDoControllerTest {
     @Test
     public void shouldCreateTodo() {
         Todo todo = todoComplete();
-        controller.createTodo(todo);
 
+        doReturn(todoComplete())
+                .when(service)
+                .createTodo(todoComplete(), "user-1");
 
+        Todo result = controller.createTodo(todo, "user-1");
+
+        verify(service).createTodo(todoComplete(), "user-1");
+
+        Assertions.assertEquals(todoComplete(),result);
     }
 
 
