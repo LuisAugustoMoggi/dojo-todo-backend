@@ -72,5 +72,13 @@ public class ToDoControllerTest {
         Assertions.assertEquals(todoComplete(), result.getContent().get(0));
     }
 
+    @Test
+    public void shouldCreateTodo() {
+        Todo todo = todoComplete();
+        controller.createTodo(todo);
+
+
+    }
+
 
 }
