@@ -5,6 +5,7 @@ import br.com.dojo.todo.domains.TodoFixture;
 import br.com.dojo.todo.repositories.TodoRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestTemplate;
 import org.mockito.Mockito;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;

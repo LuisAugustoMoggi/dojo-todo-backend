@@ -10,4 +10,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TodoRepository extends PagingAndSortingRepository<Todo, Long> {
     Page<Todo> findByUser(Pageable pageable, String userId);
+    int countTodoByUser(String userId);
 }
