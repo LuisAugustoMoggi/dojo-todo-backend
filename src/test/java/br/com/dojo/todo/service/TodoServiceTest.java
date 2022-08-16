@@ -71,4 +71,14 @@ public class TodoServiceTest {
         Assertions.assertEquals(TodoFixture.todoComplete(), result.getContent().get(0));
     }
 
+    @Test
+    public void shouldCreateTodo() {
+        Mockito.doReturn(1)
+                .when(todoRepository)
+                .countTodoByUser("user-1");
+
+        Todo result = todoService.createTodo(TodoFixture.todoComplete(), "user-1");
+        Mockito.verify(todoRepository)
+                .countTodoByUser("user-1");
+    }
 }
