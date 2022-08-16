@@ -22,8 +22,8 @@ public class ToDoController {
     }
 
     @PostMapping
-    public void createTodo(Todo todo) {
-
+    public Todo createTodo(Todo todo, String headerUser) {
+        return todoService.createTodo(todo, headerUser);
     }
 
 }

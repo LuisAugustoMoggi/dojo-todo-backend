@@ -15,4 +15,9 @@ public class TodoService {
     public Page<Todo> getPageableTodo(Pageable pageRequest, String userId) {
         return todoRepository.findByUser(pageRequest, userId);
     }
+
+    public Todo createTodo(Todo todoComplete, String headerUser) {
+        int count = todoRepository.countTodoByUser(headerUser);
+        return null;
+    }
 }
